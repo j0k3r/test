@@ -28,7 +28,7 @@ module.exports = (function self() {
 
 process.on('exit', () => {
   try {
-    removeSync(module.exports);
+    // removeSync(module.exports);
   } catch (error) {
     if (rmTmpDirIgnorableErrorCodes.has(error.code)) return;
     throw error;

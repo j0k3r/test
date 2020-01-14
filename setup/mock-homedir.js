@@ -16,7 +16,7 @@ deferredRunner.then(runner => {
 
     // Cleanup temp homedir after each top level test run
     try {
-      emptyDirSync(processTmpDir);
+      // emptyDirSync(processTmpDir);
     } catch (error) {
       if (rmTmpDirIgnorableErrorCodes.has(error.code)) return;
       throw error;
