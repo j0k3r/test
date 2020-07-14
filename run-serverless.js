@@ -28,7 +28,7 @@ const resolveServerless = (serverlessPath, modulesCacheStub, callback) => {
   const { restore: restoreProcessWarnings } = preventCircularDepPropertyWarning();
   const originalCache = Object.assign({}, require.cache);
   for (const key of Object.keys(require.cache)) delete require.cache[key];
-  disableServerlessStatsRequests(serverlessPath);
+  // disableServerlessStatsRequests(serverlessPath);
   for (const [key, value] of entries(modulesCacheStub)) require.cache[key] = { exports: value };
 
   const restore = () => {
